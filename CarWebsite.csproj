@@ -1,0 +1,656 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4414A7BA-EE8E-463B-99DC-42C232ED7699}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CarWebsite</RootNamespace>
+    <AssemblyName>CarWebsite</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44344</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BMWI4.aspx" />
+    <Content Include="BMWI4Buy.aspx" />
+    <Content Include="BMWI4\media\bmwi4.mp4" />
+    <Content Include="BMWI4\media\bmwi4blackside.jpg" />
+    <Content Include="BMWI4\media\bmwi4blackside1.png" />
+    <Content Include="BMWI4\media\bmwi4blackside2.jpg" />
+    <Content Include="BMWI4\media\bmwi4exterior2.jpg" />
+    <Content Include="BMWI4\media\bmwi4exterior3.jpg" />
+    <Content Include="BMWI4\media\bmwi4ge.jpg" />
+    <Content Include="BMWI4\media\bmwi4info.jpg" />
+    <Content Include="BMWI4\media\bmwi4interior1.jpg" />
+    <Content Include="BMWI4\media\bmwi4interior2.jpg" />
+    <Content Include="BMWI4\media\bmwi4interior3.jpg" />
+    <Content Include="BMWI4\media\bmwi4redinterior.png" />
+    <Content Include="BMWI4\media\bmwi4redside.jpg" />
+    <Content Include="BMWI4\media\bmwi4redside2.jpg" />
+    <Content Include="BMWI4\media\bmwi4side1blue.png" />
+    <Content Include="BMWI4\media\bmwi4side1white.jpg" />
+    <Content Include="BMWI4\media\bmwi4side2blue.png" />
+    <Content Include="BMWI4\media\bmwi4side3white.jpg" />
+    <Content Include="BMWI4\media\bmwi4sideblue.png" />
+    <Content Include="BMWI4\media\bmwi4sidewhite.png" />
+    <Content Include="BMWI4\media\bmwi4tailgate.jpg" />
+    <Content Include="BMWI4\media\bmwiexterioor1.jpg" />
+    <Content Include="BMWI7.aspx" />
+    <Content Include="BMWI7Buy.aspx" />
+    <Content Include="bmwi7\bmwi7.mp4" />
+    <Content Include="bmwi7\bmwi7blackfront.jpg" />
+    <Content Include="bmwi7\bmwi7blackside.jpg" />
+    <Content Include="bmwi7\bmwi7blue.png" />
+    <Content Include="bmwi7\bmwi7front.jpg" />
+    <Content Include="bmwi7\bmwi7info.png" />
+    <Content Include="bmwi7\bmwi7inter.jpg" />
+    <Content Include="bmwi7\bmwi7inter1.jpg" />
+    <Content Include="bmwi7\bmwi7inter2.jpg" />
+    <Content Include="bmwi7\bmwi7rear.jpg" />
+    <Content Include="bmwi7\bmwi7red.jpg" />
+    <Content Include="bmwi7\bmwi7side.jpg" />
+    <Content Include="bmwi7\bmwi7side1.png" />
+    <Content Include="bmwi7\bmwi7susta.jpg" />
+    <Content Include="bmwi7\bmwi7susta1.jpg" />
+    <Content Include="bmwi7\bmwi7whiteside.jpg" />
+    <Content Include="bmwi7\bmwi7whiteside1.png" />
+    <Content Include="BMWIXCardPay.aspx" />
+    <Content Include="BMWIXEMICalc.aspx" />
+    <Content Include="BMWIXInvoiceLoan.aspx" />
+    <Content Include="bmwix\bmw ix1.mp4" />
+    <Content Include="bmwix\bmwix.jpg" />
+    <Content Include="bmwix\bmwix1.jpg" />
+    <Content Include="bmwix\bmwix2.jpg" />
+    <Content Include="bmwix\bmwix3.jpg" />
+    <Content Include="bmwix\bmwix4.jpg" />
+    <Content Include="bmwix\bmwix5.jpg" />
+    <Content Include="bmwix\bmwix6.jpg" />
+    <Content Include="bmwix\bmwix7.jpg" />
+    <Content Include="bmwix\bmwix8.jpg" />
+    <Content Include="bmwix\bmwixblackback.jpg" />
+    <Content Include="bmwix\bmwixblackback.png" />
+    <Content Include="bmwix\bmwixblackfron.jpg" />
+    <Content Include="bmwix\bmwixblueback.png" />
+    <Content Include="bmwix\bmwixbluefront.png" />
+    <Content Include="bmwix\bmwixblueside.png" />
+    <Content Include="bmwix\bmwixfinal.jpg" />
+    <Content Include="bmwix\bmwixredback.jpg" />
+    <Content Include="bmwix\bmwixredside.jpg" />
+    <Content Include="bmwix\bmwixscroll.jpg" />
+    <Content Include="bmwix\bmwixscroll1.jpg" />
+    <Content Include="bmwix\bmwixwhiteback.jpg" />
+    <Content Include="bmwix\bmwixwhitefront.jpg" />
+    <Content Include="bmwix\bmwixwhiteside.png" />
+    <Content Include="BMWM2.aspx" />
+    <Content Include="BMWM2Buy.aspx" />
+    <Content Include="bmwm2\BMEM8DISC.jpg" />
+    <Content Include="bmwm2\bmwm2.mp4" />
+    <Content Include="bmwm2\bmwm2blackside.png" />
+    <Content Include="bmwm2\bmwm2blackside1.png" />
+    <Content Include="bmwm2\bmwm2blackside2.png" />
+    <Content Include="bmwm2\bmwm2blueside1.png" />
+    <Content Include="bmwm2\bmwm2blueside2.jpg" />
+    <Content Include="bmwm2\bmwm2driving.jpg" />
+    <Content Include="bmwm2\bmwm2front.jpg" />
+    <Content Include="bmwm2\bmwm2interior.jpg" />
+    <Content Include="bmwm2\bmwm2interior1.jpg" />
+    <Content Include="bmwm2\bmwm2parking.jpg" />
+    <Content Include="bmwm2\bmwm2rear.jpg" />
+    <Content Include="bmwm2\bmwm2rear.png" />
+    <Content Include="bmwm2\bmwm2redside.png" />
+    <Content Include="bmwm2\bmwm2redside1.png" />
+    <Content Include="bmwm2\bmwm2redside2.png" />
+    <Content Include="bmwm2\bmwm2roof.jpg" />
+    <Content Include="bmwm2\bmwm2side.png" />
+    <Content Include="bmwm2\bmwm2side1.png" />
+    <Content Include="bmwm2\bmwm2whiteside1.png" />
+    <Content Include="bmwm2\BMWM8ENGINE.jpg" />
+    <Content Include="bmwm2\BMWM8EXHAUST.jpg" />
+    <Content Include="bmwm2\BMWM8FRONT.jpg" />
+    <Content Include="bmwm2\BMWM8INTERIOR.jpg" />
+    <Content Include="bmwm2\BMWM8REAR.jpg" />
+    <Content Include="BMWM4.aspx" />
+    <Content Include="BMWM4Buy.aspx" />
+    <Content Include="bmwm4\bmwm4.mp4" />
+    <Content Include="bmwm4\bmwm4black.jpg" />
+    <Content Include="bmwm4\bmwm4blue.jpeg" />
+    <Content Include="bmwm4\BMWM4EXTERIOR.jpg" />
+    <Content Include="bmwm4\BMWM4EXTERIOR1.jpg" />
+    <Content Include="bmwm4\BMWM4EXTERIOR2.jpg" />
+    <Content Include="bmwm4\BMWM4INFO.png" />
+    <Content Include="bmwm4\BMWM4INTERIOR.jpg" />
+    <Content Include="bmwm4\BMWM4INTERIOR1.jpg" />
+    <Content Include="bmwm4\BMWM4INTERIOR2.jpg" />
+    <Content Include="bmwm4\BMWM4LEFT.jpg" />
+    <Content Include="bmwm4\bmwm4red.jpg" />
+    <Content Include="bmwm4\BMWM4RIGHT.jpg" />
+    <Content Include="bmwm4\bmwm4white.jpg" />
+    <Content Include="BMWM8.aspx" />
+    <Content Include="BMWM8Buy.aspx" />
+    <Content Include="bmwm8\BMEM8DISC.jpg" />
+    <Content Include="bmwm8\BMWm8.mp4" />
+    <Content Include="bmwm8\bmwm8black.jpg" />
+    <Content Include="bmwm8\bmwm8blue.jpg" />
+    <Content Include="bmwm8\BMWM8ENGINE.jpg" />
+    <Content Include="bmwm8\BMWM8EXHAUST.jpg" />
+    <Content Include="bmwm8\BMWM8FRONT.jpg" />
+    <Content Include="bmwm8\bmwm8info.jpg" />
+    <Content Include="bmwm8\bmwm8instrument.jpg" />
+    <Content Include="bmwm8\BMWM8INTERIOR.jpg" />
+    <Content Include="bmwm8\bmwm8msetup.jpg" />
+    <Content Include="bmwm8\BMWM8REAR.jpg" />
+    <Content Include="bmwm8\bmwm8red.jpg" />
+    <Content Include="bmwm8\bmwm8white.jpg" />
+    <Content Include="BMWX3.aspx" />
+    <Content Include="BMWX3Buy.aspx" />
+    <Content Include="BMWX3\BMWRIGHT.jpg" />
+    <Content Include="BMWX3\BMWX3.mp4" />
+    <Content Include="BMWX3\bmwx3black.jpg" />
+    <Content Include="BMWX3\bmwx3blue.jpg" />
+    <Content Include="BMWX3\BMWX3ENGINE.jpg" />
+    <Content Include="BMWX3\BMWX3FRONT.jpg" />
+    <Content Include="BMWX3\BMWX3HEADLIGHT.jpg" />
+    <Content Include="BMWX3\BMWX3INFO.png" />
+    <Content Include="BMWX3\BMWX3LEFT.jpg" />
+    <Content Include="BMWX3\bmwx3red.jpg" />
+    <Content Include="BMWX3\BMWX3SUSPEN.jpg" />
+    <Content Include="BMWX3\BMWX3TRANSMISSION.jpg" />
+    <Content Include="BMWX3\BMWX3WHEEL.jpg" />
+    <Content Include="BMWX3\bmwx3white.jpg" />
+    <Content Include="BMWX5.aspx" />
+    <Content Include="BMWX5Buy.aspx" />
+    <Content Include="bmwx5\BMWX3EXTERIOR.jpg" />
+    <Content Include="bmwx5\BMWX3EXTERIOR1.jpg" />
+    <Content Include="bmwx5\BMWX3EXTERIOR2.jpg" />
+    <Content Include="bmwx5\bmwx5.mp4" />
+    <Content Include="bmwx5\BMWX5BLACK.jpg" />
+    <Content Include="bmwx5\BMWX5BLUE.jpg" />
+    <Content Include="bmwx5\BMWX5Buy.jpg" />
+    <Content Include="bmwx5\BMWX5INFO.png" />
+    <Content Include="bmwx5\BMWX5INTERIOR.jpg" />
+    <Content Include="bmwx5\BMWX5INTERIOR1.jpg" />
+    <Content Include="bmwx5\BMWX5INTERIOR2.jpg" />
+    <Content Include="bmwx5\BMWX5LEFT.jpg" />
+    <Content Include="bmwx5\BMWX5RIGHT.jpg" />
+    <Content Include="bmwx5\BMWX5WHITE.png" />
+    <Content Include="BMWX7.aspx" />
+    <Content Include="BMWX7Buy.aspx" />
+    <Content Include="BMWX7\BMWX7.mp4" />
+    <Content Include="BMWX7\BMWX7BLACK.jpg" />
+    <Content Include="BMWX7\BMWX7EXTERIOR1.jpg" />
+    <Content Include="BMWX7\BMWX7EXTERIOR2.jpg" />
+    <Content Include="BMWX7\BMWX7EXYERIOR.jpg" />
+    <Content Include="BMWX7\BMWX7INFO.png" />
+    <Content Include="BMWX7\BMWX7INTERIOR.jpg" />
+    <Content Include="BMWX7\BMWX7INTERIOR1.jpg" />
+    <Content Include="BMWX7\BMWX7INTERIOR2.jpg" />
+    <Content Include="BMWX7\BMWX7LEFT.jpg" />
+    <Content Include="BMWX7\BMWX7RED.jpg" />
+    <Content Include="BMWX7\BMWX7RIGHT.jpg" />
+    <Content Include="BMWX7\BMWX7WHITE.jpg" />
+    <Content Include="BMWX7\BMWXYBLUE.jpg" />
+    <Content Include="BMWZ4.aspx" />
+    <Content Include="BMWZ4Buy.aspx" />
+    <Content Include="BMWZ4\BMWZ4BLACK.jpg" />
+    <Content Include="BMWZ4\BMWZ4BLUE.jpg" />
+    <Content Include="BMWZ4\BMWZ4EXTERIOR1.jpg" />
+    <Content Include="BMWZ4\BMWZ4EXTERIOR2.jpg" />
+    <Content Include="BMWZ4\BMWZ4EXTERIOR3.jpg" />
+    <Content Include="BMWZ4\BMWZ4INFO.png" />
+    <Content Include="BMWZ4\BMWZ4INTERIOR1.jpg" />
+    <Content Include="BMWZ4\BMWZ4INTERIOR2.jpg" />
+    <Content Include="BMWZ4\BMWZ4INTERIOR3.jpg" />
+    <Content Include="BMWZ4\BMWZ4LEFT.jpg" />
+    <Content Include="BMWZ4\BMWZ4RED.jpg" />
+    <Content Include="BMWZ4\BMWZ4RIGHT.jpg" />
+    <Content Include="BMWZ4\BMWZ4WHITE.jpg" />
+    <Content Include="BMWZ4\x2mate.com-The New Z4-%281080p%29.mp4" />
+    <Content Include="caricons\bmw z4.png" />
+    <Content Include="caricons\bmw-ix.png" />
+    <Content Include="caricons\bmwi4.png" />
+    <Content Include="caricons\bmwi7.png" />
+    <Content Include="caricons\bmwm2.png" />
+    <Content Include="caricons\bmwm4.png" />
+    <Content Include="caricons\bmwm8.png" />
+    <Content Include="caricons\bmwx3.png" />
+    <Content Include="caricons\bmwx5.png" />
+    <Content Include="caricons\bmwx7.png" />
+    <Content Include="Congratulation.aspx" />
+    <Content Include="EmpDetails.aspx" />
+    <Content Include="media\bmwcaricon.png" />
+    <Content Include="media\bmwelectric.jpg" />
+    <Content Include="media\bmwicon.png" />
+    <Content Include="media\bmwlog.png" />
+    <Content Include="media\bmwz4.mp4" />
+    <Content Include="media\carticon.png" />
+    <Content Include="media\ProfileIcon.png" />
+    <Content Include="ORDERS.aspx" />
+    <Content Include="SAdminHomePage.aspx" />
+    <Content Include="Wallpaper\converwall.jpg" />
+    <Content Include="Wallpaper\coupewall.jpg" />
+    <Content Include="Wallpaper\elecwall.jpg" />
+    <Content Include="Wallpaper\loginwall.jpg" />
+    <Content Include="Wallpaper\suvwall.jpg" />
+    <Content Include="Web.config" />
+    <Content Include="HomePage.aspx" />
+    <Content Include="AllCars.aspx" />
+    <Content Include="CoupeCars.aspx" />
+    <Content Include="SuvCars.aspx" />
+    <Content Include="ElectricCars.aspx" />
+    <Content Include="ConvertCars.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Registration.aspx" />
+    <Content Include="AdminHomepage.aspx" />
+    <Content Include="UserDetails.aspx" />
+    <Content Include="Invoice.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="BMWIX.aspx" />
+    <Content Include="BMWIXBuy.aspx" />
+    <Content Include="BMWIXInvoice.aspx" />
+    <Content Include="WebForm16.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BMWI4.aspx.cs">
+      <DependentUpon>BMWI4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BMWI4.aspx.designer.cs">
+      <DependentUpon>BMWI4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BMWI4Buy.aspx.cs">
+      <DependentUpon>BMWI4Buy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BMWI4Buy.aspx.designer.cs">
+      <DependentUpon>BMWI4Buy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BMWI7.aspx.cs">
+      <DependentUpon>BMWI7.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BMWI7.aspx.designer.cs">
+      <DependentUpon>BMWI7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BMWI7Buy.aspx.cs">
+      <DependentUpon>BMWI7Buy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BMWI7Buy.aspx.designer.cs">
+      <DependentUpon>BMWI7Buy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BMWIXCardPay.aspx.cs">
+      <DependentUpon>BMWIXCardPay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BMWIXCardPay.aspx.designer.cs">
+      <DependentUpon>BMWIXCardPay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BMWIXEMICalc.aspx.cs">
+      <DependentUpon>BMWIXEMICalc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BMWIXEMICalc.aspx.designer.cs">
+      <DependentUpon>BMWIXEMICalc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BMWIXInvoiceLoan.aspx.cs">
+      <DependentUpon>BMWIXInvoiceLoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BMWIXInvoiceLoan.aspx.designer.cs">
+      <DependentUpon>BMWIXInvoiceLoan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BMWM2.aspx.cs">
+      <DependentUpon>BMWM2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BMWM2.aspx.designer.cs">
+      <DependentUpon>BMWM2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BMWM2Buy.aspx.cs">
+      <DependentUpon>BMWM2Buy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BMWM2Buy.aspx.designer.cs">
+      <DependentUpon>BMWM2Buy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BMWM4.aspx.cs">
+      <DependentUpon>BMWM4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BMWM4.aspx.designer.cs">
+      <DependentUpon>BMWM4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BMWM4Buy.aspx.cs">
+      <DependentUpon>BMWM4Buy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BMWM4Buy.aspx.designer.cs">
+      <DependentUpon>BMWM4Buy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BMWM8.aspx.cs">
+      <DependentUpon>BMWM8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BMWM8.aspx.designer.cs">
+      <DependentUpon>BMWM8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BMWM8Buy.aspx.cs">
+      <DependentUpon>BMWM8Buy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BMWM8Buy.aspx.designer.cs">
+      <DependentUpon>BMWM8Buy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BMWX3.aspx.cs">
+      <DependentUpon>BMWX3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BMWX3.aspx.designer.cs">
+      <DependentUpon>BMWX3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BMWX3Buy.aspx.cs">
+      <DependentUpon>BMWX3Buy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BMWX3Buy.aspx.designer.cs">
+      <DependentUpon>BMWX3Buy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BMWX5.aspx.cs">
+      <DependentUpon>BMWX5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BMWX5.aspx.designer.cs">
+      <DependentUpon>BMWX5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BMWX5Buy.aspx.cs">
+      <DependentUpon>BMWX5Buy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BMWX5Buy.aspx.designer.cs">
+      <DependentUpon>BMWX5Buy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BMWX7.aspx.cs">
+      <DependentUpon>BMWX7.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BMWX7.aspx.designer.cs">
+      <DependentUpon>BMWX7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BMWX7Buy.aspx.cs">
+      <DependentUpon>BMWX7Buy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BMWX7Buy.aspx.designer.cs">
+      <DependentUpon>BMWX7Buy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BMWZ4.aspx.cs">
+      <DependentUpon>BMWZ4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BMWZ4.aspx.designer.cs">
+      <DependentUpon>BMWZ4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BMWZ4Buy.aspx.cs">
+      <DependentUpon>BMWZ4Buy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BMWZ4Buy.aspx.designer.cs">
+      <DependentUpon>BMWZ4Buy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Congratulation.aspx.cs">
+      <DependentUpon>Congratulation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Congratulation.aspx.designer.cs">
+      <DependentUpon>Congratulation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmpDetails.aspx.cs">
+      <DependentUpon>EmpDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmpDetails.aspx.designer.cs">
+      <DependentUpon>EmpDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ORDERS.aspx.cs">
+      <DependentUpon>ORDERS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ORDERS.aspx.designer.cs">
+      <DependentUpon>ORDERS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SAdminHomePage.aspx.cs">
+      <DependentUpon>SAdminHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAdminHomePage.aspx.designer.cs">
+      <DependentUpon>SAdminHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllCars.aspx.cs">
+      <DependentUpon>AllCars.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllCars.aspx.designer.cs">
+      <DependentUpon>AllCars.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoupeCars.aspx.cs">
+      <DependentUpon>CoupeCars.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoupeCars.aspx.designer.cs">
+      <DependentUpon>CoupeCars.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SuvCars.aspx.cs">
+      <DependentUpon>SuvCars.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SuvCars.aspx.designer.cs">
+      <DependentUpon>SuvCars.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ElectricCars.aspx.cs">
+      <DependentUpon>ElectricCars.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ElectricCars.aspx.designer.cs">
+      <DependentUpon>ElectricCars.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConvertCars.aspx.cs">
+      <DependentUpon>ConvertCars.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConvertCars.aspx.designer.cs">
+      <DependentUpon>ConvertCars.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminHomepage.aspx.cs">
+      <DependentUpon>AdminHomepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminHomepage.aspx.designer.cs">
+      <DependentUpon>AdminHomepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserDetails.aspx.cs">
+      <DependentUpon>UserDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserDetails.aspx.designer.cs">
+      <DependentUpon>UserDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice.aspx.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Invoice.aspx.designer.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BMWIX.aspx.cs">
+      <DependentUpon>BMWIX.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BMWIX.aspx.designer.cs">
+      <DependentUpon>BMWIX.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BMWIXBuy.aspx.cs">
+      <DependentUpon>BMWIXBuy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BMWIXBuy.aspx.designer.cs">
+      <DependentUpon>BMWIXBuy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BMWIXInvoice.aspx.cs">
+      <DependentUpon>BMWIXInvoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BMWIXInvoice.aspx.designer.cs">
+      <DependentUpon>BMWIXInvoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm16.aspx.cs">
+      <DependentUpon>WebForm16.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm16.aspx.designer.cs">
+      <DependentUpon>WebForm16.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Site1.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50157</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44344/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
