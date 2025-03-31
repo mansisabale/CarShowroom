@@ -1,0 +1,111 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="CarWebsite.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>BMW Online Shop</title>
+    <link rel="icon" href="media/bmwicon.png" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        .navtab:hover{
+            border-bottom:4px solid blue;
+            color:black;
+        }
+        .navtab h2:hover{
+            color:black;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div style="display:flex;border-bottom:2px solid black;">
+                <div style="margin-left:80px;">
+                    <a href="HomePage.aspx"> <img src="media/bmwlog.png" style="height:70px;width:80px" /></a>
+                </div>
+                <a href="AllCars.aspx" class="navtab" style="text-decoration:none;">
+                    <div  style="padding-left:15px; padding-right:15px; padding-top:5px;color:grey">
+                    <h2>All Models</h2>
+                </div>
+                </a>
+                <a href="CoupeCars.aspx" class="navtab" style="text-decoration:none;">
+                <div  style="padding-left:15px;padding-right:15px; padding-top:5px;color:grey">
+                    <h2>Coupe</h2>
+                </div>
+                </a>
+                <a href="SuvCars.aspx" class="navtab" style="text-decoration:none;">
+                <div  style="padding-left:15px;padding-right:15px; padding-top:5px;color:grey">
+                    <h2>SUV</h2>
+                </div>
+                </a>
+                <a href="ElectricCars.aspx" class="navtab" style="text-decoration:none;">
+                <div  style="padding-left:15px;padding-right:15px; padding-top:5px;color:grey">
+                    <h2>Electric</h2>
+                </div>
+                </a>
+                <a href="ConvertCars.aspx" class="navtab" style="text-decoration:none;">
+                <div  style="padding-left:15px;padding-right:15px; padding-top:5px;color:grey">
+                    <h2>Convertible</h2>
+                </div>
+                </a>
+
+                <div style="padding-left:15px;padding-right:15px; padding-top:25px;margin-left:400px">
+                    <asp:Label ID="usertypem" runat="server"></asp:Label>
+                    <asp:ImageButton ID="ImageButton1" runat="server" Height="30px" ImageUrl="~/media/ProfileIcon.png" OnClick="ImageButton1_Click" CausesValidation="false" Width="30px"  />
+                </div>
+
+
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <div>
+                <div style="background-color: #F2F2F2">
+                    <div style="margin:70px">
+                        <p"><b>Disclaimer:</b> The models, equipment and possible vehicle configurations illustrated in this specification sheet may differ from vehicles supplied in the Indian market. Some options may contain mandatory combinations with other options. Please check with your local Authorized BMW Dealer. Price prevailing at the time of invoicing will be applicable. Ex-showroom price inclusive of GST (incl compensation cess) as applicable but excludes Road Tax, Tax collected at Source (TCS), GST on Tax collected at source, RTO, statutory taxes/fees, other local tax/cess levies and insurance. Prices and options are subject to change without prior notice.</p>
+
+                    </div>
+                <hr />
+                
+                
+                    <asp:Table ID="Table1" runat="server" style="margin-left:250px;justify-content:space-evenly">
+                        <asp:TableRow  >
+                            <asp:TableCell  >
+                                FEEDBACK
+                            </asp:TableCell >
+                            <asp:TableCell >
+                                CONTACT US
+                            </asp:TableCell>
+                            <asp:TableCell>
+                                LEGAL
+                            </asp:TableCell>
+                        </asp:TableRow>
+                        <asp:TableRow>
+                            <asp:TableCell >
+                                <a href="https://shop.bmw.in/#/" style="text-decoration:none;color:black ;margin-right:100px"><b>Share Your FeedBack</b></a>
+                            </asp:TableCell>
+                            <asp:TableCell>
+                                <a href="#" style="text-decoration:none;color:black;margin-right:100px;" ><b>contact.india@bmw.in</b></a>
+                            </asp:TableCell>
+                            <asp:TableCell>
+                                <a href="https://www.bmw.in/en/footer/metanavigation/-legal-disclaimer-imprint.html" style="text-decoration:none;color:black"><b>Legal Disclaimer/ Imprint</b></a>
+                            </asp:TableCell>
+                        </asp:TableRow>
+                        <asp:TableRow>
+                            <asp:TableCell></asp:TableCell>
+                            <asp:TableCell>
+                                <a href="https://www.bmw.in/en/topics/Fascination-BMW/bmw-group.html" style="text-decoration:none;color:black"><b>BMW Group</b></a>
+                            </asp:TableCell>
+                            <asp:TableCell>
+                                <a href="https://www.bmw.in/en/footer/metanavigation/privacy-policy.html" style="text-decoration:none;color:black"><b>Privacy Policy</b></a>
+                            </asp:TableCell>
+                        </asp:TableRow>
+                    </asp:Table>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
